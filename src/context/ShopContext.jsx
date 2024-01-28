@@ -1,5 +1,6 @@
 import React, { createContext } from "react";
 import all_product from '../components/assets/all_product'; 
+// const all_product = require('../components/assets/all_product.js');
 
 export const ShopContext = createContext(null);
 
