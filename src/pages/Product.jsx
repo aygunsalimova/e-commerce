@@ -2,6 +2,9 @@ import React, { useContext } from 'react';
 import {ShopContext} from '../context/ShopContext';
 import { useParams } from 'react-router-dom';
 import Breadcrum from '../components/breadcrums/Breadcrum';
+import ProductDisplay from '../components/productDisplay/ProductDisplay';
+import DescribtionBox from '../components/breadcrums/describtionBox/DescribtionBox';
+import RelatedProducts from '../components/relatedProducts/RelatedProducts';
 // const all_product = require('../components/assets/all_product.js');
 
 function Product() {
@@ -17,6 +20,9 @@ function Product() {
     return (
         <div>
             <Breadcrum product={product} />
+            <ProductDisplay product={product} />
+            <DescribtionBox />
+            <RelatedProducts />
         </div>
     );
 }
