@@ -3,6 +3,11 @@
     justify-content: space-around;
     padding: 16px;
     box-shadow: 0 1px 3px -2px black;
+    align-items: center;
+}
+
+.nav-bars {
+    display: none;
 }
 
 .nav-logo {
@@ -78,3 +83,13 @@
     color: #fff;
 }
 
+@media only screen and (max-width: 576px) {
+    .nav-menu,
+    .nav-login-cart {
+        display: none;
+    }
+
+    .nav-bars {
+        display: block;
+    }
+}

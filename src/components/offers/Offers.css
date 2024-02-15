@@ -6,6 +6,7 @@
     padding: 0px 140px;
     margin-bottom: 150px;
     background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+    margin-bottom: 0;
 }
 
 .offers-left {
@@ -46,4 +47,23 @@
     align-items: center;
     justify-content: flex-end;
     padding-top: 50px;
+}
+
+@media only screen and (max-width: 576px) {
+    .offers {
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 0;
+        margin-bottom: 300px;
+    }
+
+    .offers-left h1 {
+        font-size: 35px;
+    }
+
+    .offers-left p {
+        font-size: 16px;
+    }
+
 }

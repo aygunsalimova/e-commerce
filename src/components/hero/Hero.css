@@ -57,3 +57,26 @@
     align-items: center;
     justify-content: center;
 }
+
+@media only screen and (max-width: 576px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        height: 80vh;
+    }
+    .hero-right {
+        display: none;
+    }
+    .hero-left {
+        padding-left: 0px;
+        align-items: center;
+
+    }
+    .hero-left p {
+        font-size: 35px;
+    }
+    .hero-latest-btn {
+        margin-bottom: 50px;
+        margin-top: 0;
+    }
+}

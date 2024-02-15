@@ -61,3 +61,10 @@
     height: 3px;
     background-color: #c7c7c7;
 }
+
+@media only screen and (max-width: 576px) {
+    .footer-links {
+        display: none;
+    }
+
+}

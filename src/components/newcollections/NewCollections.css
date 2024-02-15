@@ -25,3 +25,14 @@
     margin-top: 50px;
     gap: 30px;
 }
+
+@media only screen and (max-width: 576px) {
+    .new-collections h1 {
+        font-size: 35px;
+    }
+    
+    .collections {
+        grid-template-columns: 1fr;
+    }
+
+}
