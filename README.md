@@ -1,4 +1,4 @@
-Demo E-commerce Website <a href="https://shopperecommercesite.netlify.app/">preview</a>
+Demo E-commerce Website <a href="https://shopperecommercesite.netlify.app/" target="_blank">preview</a>
 
 Tech Stack:
 - React
