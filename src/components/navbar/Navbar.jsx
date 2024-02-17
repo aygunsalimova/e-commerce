@@ -5,11 +5,22 @@ import cart_icon from '../assets/cart_icon.png'
 import { Link } from 'react-router-dom';
 import { ShopContext } from '../../context/ShopContext';
 import { FaBars } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
+
+const items = [
+    { name: 'Shop', title: 'shop', href: '/' },
+    { name: 'Men', title: 'men', href: '/men' },
+    { name: 'Women', title: 'women', href: '/women' },
+    { name: 'Kids', title: 'kids', href: '/kids' },
+]
 
 function Navbar() {
 
     const [menu, setMenu] = useState("shop");
     const { getTotalCartItems } = useContext(ShopContext);
+    const [open, setOpen] = useState(false)
+
+    const toggleSidebar = () => { setOpen(prev => !prev) }
 
 
     return (
@@ -18,14 +29,35 @@ function Navbar() {
                 <img src={logo} alt="logo" />
                 <p>SHOPPER</p>
             </div>
-            <div className='nav-bars'>
-                <FaBars />
-            </div>
+            <button
+                className='nav-bars'
+                onClick={toggleSidebar}
+            >
+                { open ? <IoMdClose /> : <FaBars /> }
+                
+            </button>
+            <ul className='nav-bars-list'>
+                {open && items.map((item, idx) => {
+                    const { title, href, name } = item
+                    return (
+                        <li key={title}>
+                            <a
+                                onClick={toggleSidebar}
+                                href={href}
+                                className="nav-bars-list-el"
+                            >
+                                <span>{name}</span>
+                            </a>
+                        </li>
+                    )
+                })}
+            </ul>
             <ul className="nav-menu">
-                <li onClick={() => { setMenu("shop") }}><Link to="/">Shop</Link>{menu === "shop" ? <hr /> : <></>}</li>
-                <li onClick={() => { setMenu("men") }}><Link to="/men">Men</Link> {menu === "men" ? <hr /> : <></>}</li>
-                <li onClick={() => { setMenu("women") }}><Link to="/women">Women</Link> {menu === "women" ? <hr /> : <></>}</li>
-                <li onClick={() => { setMenu("kids") }}><Link to="/kids">Kids</Link> {menu === "kids" ? <hr /> : <></>}</li>
+                {items.map((item) => {
+                    return (
+                        <li onClick={() => { setMenu(item.title) }}><Link to={item.href}>{item.name}</Link>{menu === item.title ? <hr /> : <></>}</li>
+                    )
+                })}
             </ul>
             <div className="nav-login-cart">
                 <Link to="/login">

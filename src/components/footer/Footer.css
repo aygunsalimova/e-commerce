@@ -66,5 +66,8 @@
     .footer-links {
         display: none;
     }
+    .footer-copyright {
+        font-size: 16px;
+    }
 
 }

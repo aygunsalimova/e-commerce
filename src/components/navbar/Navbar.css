@@ -10,6 +10,14 @@
     display: none;
 }
 
+.nav-bars-list {
+    display: none;
+}
+
+.nav-bars-list-el {
+    display: none;
+}
+
 .nav-logo {
     display: flex;
     align-items: center;
@@ -84,6 +92,7 @@
 }
 
 @media only screen and (max-width: 576px) {
+
     .nav-menu,
     .nav-login-cart {
         display: none;
@@ -91,5 +100,42 @@
 
     .nav-bars {
         display: block;
+        width: 35px;
+        height: 30px;
+        border: none;
+        outline: none;
+        background: transparent;
+        z-index: 999;
     }
+
+    .nav-bars svg {
+        width: 35px;
+        height: 30px;
+    }
+
+    .nav-bars-list {
+        display: block;
+        right: 0;
+        top: 30px;
+        position: absolute;
+        background: white;
+        padding-right: 100px;
+        transition: all 0.3s ease;
+
+    }
+
+    .nav-bars-list li {
+        list-style-type: none;
+    }
+
+    .nav-bars-list-el {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5px;
+        padding: 10px;
+        transition: all;
+        border: 2xp solid black;
+    }
+
 }
