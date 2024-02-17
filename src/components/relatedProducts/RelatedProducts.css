@@ -24,3 +24,21 @@
     display: flex;
     gap: 30px;
 }
+
+@media only screen and (max-width: 576px) {
+
+    .relatedproducts h1 {
+        font-size: 35px;
+        margin: 20px 0;
+    }
+
+    .relatedproducts-item {
+        margin-top: 0px;
+    }
+
+    .relatedproducts-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}

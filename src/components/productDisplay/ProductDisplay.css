@@ -96,3 +96,40 @@
 .productdisplay-right-category span {
     font-weight: 600;
 }
+
+@media only screen and (max-width: 576px) {
+    .productdisplay {
+        margin: 20px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .productdisplay-img-list {
+        display: none;
+    }
+
+    .productdisplay-main-img {
+        width: 320px;
+        height: 400px;
+    }
+
+    .productdisplay-right {
+        margin: 20px;
+        
+    }
+    .productdisplay-right h1 {
+        font-size: 20px;
+    }
+
+    .productdisplay-right-prices {
+        margin: 20px 0;
+    }
+    .productdisplay-right-size h1 {
+        margin-top: 20px;
+    }
+
+    .productdisplay-right button {
+        margin: 20px 0;
+    }
+}

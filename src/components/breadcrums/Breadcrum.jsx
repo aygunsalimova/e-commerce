@@ -7,7 +7,7 @@ function Breadcrum(props) {
     
     return (
         <div className='breadcrum'>
-            HOME <img src={arrow_icon} alt="" /> SHOP <img src={arrow_icon} alt="" /> {product.category.toUpperCase()} <img src={arrow_icon} alt="" /> {product.name}
+            HOME <img src={arrow_icon} alt="" /> SHOP <img src={arrow_icon} alt="" /> {product.category.toUpperCase()} <img src={arrow_icon} alt="" /> {product.name.split(" ").slice(0, 3).join(" ")}
         </div>
     );
 }

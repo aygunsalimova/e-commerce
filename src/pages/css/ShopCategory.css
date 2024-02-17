@@ -41,3 +41,32 @@
     font-size: 18px;
     font-weight: 500;
 }
+
+@media only screen and (max-width: 576px) {
+    .shopcategory-banner {
+        margin: 0;
+        width: 100%;
+    }
+
+    .shopcategory-indexSort {
+        margin: 20px;
+    }
+
+    .shopcategory-indexSort p {
+        font-size: 16px;
+    }
+
+    .shopcategory-sort {
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+
+    .shopcategory-products {
+        margin: 20px;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        row-gap: 40px;
+    }
+
+
+}
